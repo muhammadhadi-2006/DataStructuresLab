@@ -12,10 +12,4 @@ Features:-
 
   Simple console-based interface
 
-Coffee Prices:-
-<br>
-  Espresso: 250 units
 
-  Latte: 250 units
-
-C  appuccino: 250 units

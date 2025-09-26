@@ -4,12 +4,14 @@
 
 <h3><b>Features:-</b></h3>
 <br>
-  Calculates cost for three coffee types: Espresso, Latte, and Cappuccino
+<ul>
+  <ol>Calculates cost for three coffee types: Espresso, Latte, and Cappuccino</ol>
 
-  Uses pointers for variable access and manipulation
+ <ol>Uses pointers for variable access and manipulation</ol> 
 
-  Displays an itemized bill with total cost
+ <ol>Displays an itemized bill with total cost</ol> 
 
-  Simple console-based interface
+  <ol>Simple console-based interface</ol>
+  </ul>
 
 

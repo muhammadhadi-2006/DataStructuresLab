@@ -2,16 +2,16 @@
 using namespace std;
 int main()
 {
-	int espressoPrice = 250;
-    int lattePrice =250 ;
-    int cappuccinoPrice = 250;
-    
+    float espressoPrice = 250.0;
+    float lattePrice = 250.0;
+    float cappuccinoPrice = 250.0;
+
     int espressoQty = 0, latteQty = 0, cappuccinoQty = 0;
-    
-    int* pEspressoPrice = &espressoPrice;
-    int* pLattePrice = &lattePrice;
-    int* pCappuccinoPrice = &cappuccinoPrice;
-    
+
+    float* pEspressoPrice = &espressoPrice;
+    float* pLattePrice = &lattePrice;
+    float* pCappuccinoPrice = &cappuccinoPrice;
+
     int* pEspressoQty = &espressoQty;
     int* pLatteQty = &latteQty;
     int* pCappuccinoQty = &cappuccinoQty;
@@ -24,22 +24,20 @@ int main()
 
     cout << "Enter Cappuccino Quantity: ";
     cin >> *pCappuccinoQty;
-    
-    int espressoCost = (*pEspressoQty) * (*pEspressoPrice);
-    int latteCost = (*pLatteQty) * (*pLattePrice);
-    int cappuccinoCost = (*pCappuccinoQty) * (*pCappuccinoPrice);
 
-    int totalBill = 0;
-    int* pTotalBill = &totalBill;
+    float espressoCost = (*pEspressoQty) * (*pEspressoPrice);
+    float latteCost = (*pLatteQty) * (*pLattePrice);
+    float cappuccinoCost = (*pCappuccinoQty) * (*pCappuccinoPrice);
+
+    float totalBill = 0.0;
+    float* pTotalBill = &totalBill;
 
     *pTotalBill = espressoCost + latteCost + cappuccinoCost;
 
-    cout << "------ Cafe Bill ------"<<endl;
-    cout << "Espresso (" << *pEspressoQty << " x " << *pEspressoPrice << ") = " << espressoCost <<endl;
-    cout << "Latte    (" << *pLatteQty << " x " << *pLattePrice << ") = " << latteCost <<endl;
-    cout << "Cappuccino (" << *pCappuccinoQty << " x " << *pCappuccinoPrice << ") = " << cappuccinoCost <<endl;
-    cout << "-----------------------"<<endl;
-    cout << "TOTAL BILL: " << *pTotalBill;
+    cout << "------ Cafe Bill ------" << endl;
+    cout << "Espresso (" << *pEspressoQty << " x " << *pEspressoPrice << ") = " << espressoCost << endl;
+    cout << "Latte    (" << *pLatteQty << " x " << *pLattePrice << ") = " << latteCost << endl;
+    cout << "Cappuccino (" << *pCappuccinoQty << " x " << *pCappuccinoPrice << ") = " << cappuccinoCost << endl;
+    cout << "-----------------------" << endl;
+    cout << "TOTAL BILL: " << *pTotalBill << endl;
 }
-
-    

@@ -81,7 +81,7 @@ public:
 
     void DeleteFromBeginning() {
         if (head == nullptr) {
-            cout << "List is empty. Cannot delete." << endl;
+            cout << "List is empty Cannot delete." << endl;
             return;
         }
         Node* temp = head;
@@ -115,14 +115,14 @@ public:
         cout << endl;
     }
 
-int GetHeadID() {
+int GetHeadId() {
     if (head != nullptr)
         return head->PatientId;
     else
         return -1;
 }
 
-int GetTailID() {
+int GetTailId() {
     if (tail != nullptr)
         return tail->PatientId;
     else
@@ -150,29 +150,29 @@ int main() {
     ErQueue.InsertAtEnd(101);
     ErQueue.PrintGraphical();
 
-    cout << "After insertAtEnd(102):" << endl;
+    cout << "After InsertAtEnd(102):" << endl;
     ErQueue.InsertAtEnd(102);
     ErQueue.PrintGraphical();
 
-    cout << "After insertAtBeginning(200):" << endl;
+    cout << "After InsertAtBeginning(200):" << endl;
     ErQueue.InsertAtBeginning(200);
     ErQueue.PrintGraphical();
 
-    cout << "After insertAtPosition(150, 2):" << endl;
+    cout << "After InsertAtPosition(150, 2):" << endl;
     ErQueue.InsertAtPosition(150, 2);
     ErQueue.PrintGraphical();
    
-    cout << "After deleteFromBeginning():" << endl;
+    cout << "After DeleteFromBeginning():" << endl;
     ErQueue.DeleteFromBeginning();
     ErQueue.PrintGraphical();
 
-    cout << "After insertAtEnd(300):" << endl;
+    cout << "After InsertAtEnd(300):" << endl;
     ErQueue.InsertAtEnd(300);
     ErQueue.PrintGraphical();
   
     cout << "After all operations:" << endl;
-    cout << "(a) PatientID at head: " << ErQueue.GetHeadID() << endl;
-    cout << "(b) PatientID at tail: " << ErQueue.GetTailID() << endl;
+    cout << "(a) PatientId at head: " << ErQueue.GetHeadId() << endl;
+    cout << "(b) PatientId at tail: " << ErQueue.GetTailId() << endl;
     cout << "(c) ";
     ErQueue.PrintForward();
     cout << "(d) ";

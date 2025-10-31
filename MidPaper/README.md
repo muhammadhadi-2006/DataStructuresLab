@@ -39,7 +39,7 @@ Each node contains a Patient ID, with pointers to previous and next nodes.
 - DoublyLinkedList Class**: Manages the queue with private members `head`, `tail`, and `size`.
   - Public methods for insertion, deletion, and printing.
 <h2>step by step process</h2>
-### Initial Empty List
+Initial Empty List
 ```
 NULL
 ```

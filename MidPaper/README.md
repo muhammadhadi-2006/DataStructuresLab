@@ -38,6 +38,40 @@ Each node contains a Patient ID, with pointers to previous and next nodes.
 - Node Struct**: Represents a patient in the queue with `PatientId`, `prev`, and `next` pointers.
 - DoublyLinkedList Class**: Manages the queue with private members `head`, `tail`, and `size`.
   - Public methods for insertion, deletion, and printing.
+<h2>step by step process</h2>
+### Initial Empty List
+```
+NULL
+```
+
+### After insertAtEnd(101)
+```
+[101] <-> NULL
+```
+
+### After insertAtEnd(102)
+```
+[101] <-> [102] <-> NULL
+```
+
+### After insertAtBeginning(200)
+```
+[200] <-> [101] <-> [102] <-> NULL
+```
+
+### After insertAtPosition(150, 2)
+```
+[200] <-> [150] <-> [101] <-> [102] <-> NULL
+```
+
+### After deleteFromBeginning()
+```
+[150] <-> [101] <-> [102] <-> NULL
+```
+
+### After insertAtEnd(300)
+```
+[150] <-> [101] <-> [102] <-> [300] <-> NULL
 
 
 

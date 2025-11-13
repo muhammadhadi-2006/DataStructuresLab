@@ -1,5 +1,6 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 struct Node {
     int PatientId;
     Node* prev;
@@ -24,33 +25,34 @@ public:
     size = 0;
 }
 
+
     void InsertAtBeginning(int PatientId) {
-        Node* temp = new Node(PatientId);
+        Node* newNode = new Node(PatientId);
         if (head == nullptr) {
-            head = tail = temp;
+            head = tail = newNode;
         } else {
-            temp->next = head;
-            head->prev = temp;
-            head = temp;
+            newNode->next = head;
+            head->prev = newNode;
+            head = newNode;
         }
         size++;
     }
 
     void InsertAtEnd(int PatientId) {
-        Node* temp = new Node(PatientId);
+        Node* newNode = new Node(PatientId);
         if (tail == nullptr) {
-            head = tail = temp;
+            head = tail = newNode;
         } else {
-            tail->next = temp;
-            temp->prev = tail;
-            tail = temp;
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
         }
         size++;
     }
 
     void InsertAtPosition(int PatientId, int position) {
         if (position < 1) {
-            cout << "Invalid position. Position must be >= 1." << endl;
+            cout << "Invalid position." << endl;
             return;
         }
         if (position == 1) {
@@ -62,25 +64,26 @@ public:
             InsertAtEnd(PatientId);
             return;
         }
-        Node* temp = new Node(PatientId);
+        Node* newNode = new Node(PatientId);
         Node* current = head;
         for (int i = 1; i < position - 1; i++) {
             current = current->next;
         }
-        temp->next = current->next;
-        temp->prev = current;
+        newNode->next = current->next;
+        newNode->prev = current;
         if (current->next != nullptr) {
-            current->next->prev = temp;
+            current->next->prev = newNode;
         } else {
-            tail = temp;
+            tail = newNode;
         }
-        current->next = temp;
+        current->next = newNode;
         size++;
     }
 
+
     void DeleteFromBeginning() {
         if (head == nullptr) {
-            cout << "List is empty Cannot delete." << endl;
+            cout << "List is empty. Cannot delete." << endl;
             return;
         }
         Node* temp = head;
@@ -94,6 +97,7 @@ public:
         size--;
     }
 
+    
     void PrintForward() {
         Node* current = head;
         cout << "Forward: ";
@@ -103,6 +107,7 @@ public:
         }
         cout << endl;
     }
+
     
     void PrintBackward() {
         Node* current = tail;
@@ -114,20 +119,22 @@ public:
         cout << endl;
     }
 
-int GetHeadId() {
+int GetHeadID() {
     if (head != nullptr)
         return head->PatientId;
     else
         return -1;
 }
 
-int GetTailId() {
+int GetTailID() {
     if (tail != nullptr)
         return tail->PatientId;
     else
         return -1;
 }
-  
+
+
+    
     void PrintGraphical() {
         Node* current = head;
         cout << "Graphical: ";
@@ -149,29 +156,33 @@ int main() {
     ErQueue.InsertAtEnd(101);
     ErQueue.PrintGraphical();
 
-    cout << "After InsertAtEnd(102):" << endl;
+    cout << "After insertAtEnd(102):" << endl;
     ErQueue.InsertAtEnd(102);
     ErQueue.PrintGraphical();
 
-    cout << "After InsertAtBeginning(200):" << endl;
+    cout << "After insertAtBeginning(200):" << endl;
     ErQueue.InsertAtBeginning(200);
     ErQueue.PrintGraphical();
 
-    cout << "After InsertAtPosition(150, 2):" << endl;
+  
+    cout << "After insertAtPosition(150, 2):" << endl;
     ErQueue.InsertAtPosition(150, 2);
     ErQueue.PrintGraphical();
+
    
-    cout << "After DeleteFromBeginning():" << endl;
+    cout << "After deleteFromBeginning():" << endl;
     ErQueue.DeleteFromBeginning();
     ErQueue.PrintGraphical();
 
-    cout << "After InsertAtEnd(300):" << endl;
+   
+    cout << "After insertAtEnd(300):" << endl;
     ErQueue.InsertAtEnd(300);
     ErQueue.PrintGraphical();
+
   
     cout << "After all operations:" << endl;
-    cout << "(a) PatientId at head: " << ErQueue.GetHeadId() << endl;
-    cout << "(b) PatientId at tail: " << ErQueue.GetTailId() << endl;
+    cout << "(a) PatientID at head: " << ErQueue.GetHeadID() << endl;
+    cout << "(b) PatientID at tail: " << ErQueue.GetTailID() << endl;
     cout << "(c) ";
     ErQueue.PrintForward();
     cout << "(d) ";

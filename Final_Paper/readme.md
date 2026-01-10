@@ -89,19 +89,7 @@ Each player contains:
 
 ---
 
-## ▶️ How to Run
 
-1. Compile the program:
-
-```bash
-g++ -std=gnu++17 main.cpp -o player_system
-```
-
-2. Run the program:
-
-```bash
-./player_system
-```
 
 3. Enter number of queries followed by commands.
 
@@ -136,37 +124,11 @@ LEAVES 1
 
 ---
 
-## ✨ Why This Project is Useful
 
-- Demonstrates real-world use of BST
-- Covers advanced tree operations
-- Clean object-oriented design
-- Efficient time complexity
-- Easy to extend (AVL / Red-Black Tree)
-
----
-
-## 🚀 Possible Enhancements
-
-- Self-balancing tree (AVL or Red-Black)
-- File input/output support
-- GUI or web interface
-- Player sorting by HP
-- Multiplayer battle simulation
-
----
-
-## 🏷️ Tags
-
-`C++` `Binary Search Tree` `Data Structures` `Algorithms` `Ranking System` `Command Line Project`
-
----
 
 ## 👨‍💻 Author
 
 **Muhammad Hadi**  
-Computer Science Student / Developer
 
 ---
 
-⭐ If you like this project, feel free to enhance it and use it in your assignments or portfo
